@@ -42,9 +42,7 @@ Un environnement d'exécution Java (JRE) ou un kit de développement Java (JDK).
 
 Installation
 
-Clonez ce dépôt :
 
-git clone https://github.com/votre-utilisateur/gestion-cabinet-medical.git
 
 Accédez au répertoire du projet :
 
