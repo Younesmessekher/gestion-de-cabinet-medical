@@ -1,99 +1,95 @@
-Gestion de Cabinet Médical - Projet Java
-Ce projet est une application de gestion de cabinet médical développée en Java. Il permet de gérer les patients, les rendez-vous, les dossiers médicaux, les ordonnances et les certificats médicaux.
+Gestion de Cabinet Médical
+
+Description
+
+Ce projet Java est une application de gestion de cabinet médical. Elle permet aux médecins et à leur secrétaire de gérer efficacement les rendez-vous, les dossiers médicaux, les patients, les ordonnances et les certificats médicaux. L'application fournit une interface en ligne de commande simple et intuitive pour organiser ces activités.
 
 Fonctionnalités
-Gestion des Patients :
+
+Gestion des rendez-vous :
+
+Ajouter un rendez-vous pour un patient existant ou un nouveau patient.
+
+Supprimer un rendez-vous.
+
+Gestion des dossiers médicaux (DM) :
+
+Consultation et modification des dossiers médicaux.
+
+Gestion des patients :
 
 Ajouter un nouveau patient.
 
-Supprimer un patient.
+Supprimer un patient existant.
 
-Afficher la liste des patients.
-
-Gestion des Rendez-Vous :
-
-Planifier un rendez-vous pour un patient existant ou nouveau.
-
-Annuler un rendez-vous.
-
-Afficher la liste des rendez-vous.
-
-Gestion des Dossiers Médicaux (DM) :
-
-Ajouter des consultations, des allergies et des antécédents médicaux.
-
-Afficher les informations du dossier médical d'un patient.
+Liste des patients.
 
 Ordonnances :
 
-Créer et afficher des ordonnances pour les patients.
+Rédiger une ordonnance pour un patient.
 
-Certificats Médicaux :
+Certificats médicaux :
 
-Générer des certificats médicaux pour les patients.
-
-Structure du Projet
-Le projet est organisé en plusieurs classes Java :
-
-GestionCM : Classe principale qui contient le point d'entrée du programme (main).
-
-Patient : Représente un patient avec ses informations personnelles et son dossier médical.
-
-Medecin : Représente un médecin avec ses informations et ses fonctionnalités (consultations, ordonnances, certificats).
-
-Secretaire : Gère les rendez-vous et les interactions avec les patients.
-
-DossierMedical : Contient les informations médicales d'un patient (consultations, allergies, antécédents, poids, taille).
-
-RendezVous : Représente un rendez-vous entre un patient et un médecin.
-
-GestionnairePt : Gère la liste des patients et leurs dossiers médicaux.
-
-Ordonnance : Représente une ordonnance médicale avec une liste de médicaments.
+Délivrer un certificat médical pour un patient.
 
 Prérequis
-Java Development Kit (JDK) : Assure-toi d'avoir installé Java (version 8 ou supérieure).
 
-IDE : Tu peux utiliser un IDE comme IntelliJ IDEA, Eclipse ou NetBeans pour exécuter le projet.
+Pour exécuter ce projet, vous avez besoin de :
 
-Comment Exécuter le Projet
-Cloner le dépôt :
+Java 8 ou version ultérieure
 
-bash
-Copy
-git clone https://github.com/ton-utilisateur/gestion-cabinet-medical.git
+Un environnement d'exécution Java (JRE) ou un kit de développement Java (JDK).
+
+Installation
+
+Clonez ce dépôt :
+
+git clone https://github.com/votre-utilisateur/gestion-cabinet-medical.git
+
+Accédez au répertoire du projet :
+
 cd gestion-cabinet-medical
-Compiler et exécuter :
 
-Ouvre le projet dans ton IDE.
+Compilez le code :
 
-Compile et exécute la classe GestionCM.
+javac GestionCM.java
 
-Utilisation :
+Exécutez l'application :
 
-Suis les instructions affichées dans la console pour interagir avec l'application.
+java GestionCM
 
-Exemples d'Utilisation
-Ajouter un Patient
-Choisis l'option "Gestion Des Patients" dans le menu principal.
+Utilisation
 
-Sélectionne "Ajouter Patient".
+Lancez l'application en exécutant la commande ci-dessus.
 
-Saisis les informations du patient (nom, prénom, téléphone, adresse, poids, taille).
+Suivez les instructions affichées à l'écran pour naviguer entre les différents menus et réaliser les opérations souhaitées.
 
-Planifier un Rendez-Vous
-Choisis l'option "Gestion Des Rendez-Vous" dans le menu principal.
+Remplissez les champs demandés, tels que les informations sur le médecin et les patients, pour une utilisation optimale.
 
-Sélectionne "Ajouter un Rendez-Vous Pour un Patient Existant" ou "Ajouter un Rendez-Vous Pour un Nouveau Patient".
+Structure du Projet
 
-Saisis la date et l'heure du rendez-vous.
+GestionCM.java : Fichier principal contenant la logique du programme.
 
-Afficher un Dossier Médical
-Choisis l'option "Gestion Des Dossiers Medicaux (DM)" dans le menu principal.
+Medecin.java : Classe représentant le médecin avec ses fonctionnalités.
 
-Sélectionne un patient dans la liste.
+Secretaire.java : Classe gérant les opérations effectuées par la/le secrétaire.
 
-Affiche ou modifie les informations du dossier médical.
+Patient.java : Classe représentant un patient.
+
+GestionnairePt.java : Classe pour la gestion des patients et des dossiers médicaux.
+
+Améliorations futures
+
+Ajouter une interface graphique (GUI).
+
+Intégrer une base de données pour persister les données.
+
+Gérer les notifications de rappel pour les rendez-vous.
+
+
+
+
 
 Auteur
-HAMDAOUI YACINE , MESSEKHER YOUNES , DJEBBAR ADEL SEDDIK , CHEDDIDI RAHIM
+
+Ce projet a été développé par [HAMDAOUI YACINE , MESSEKHER YOUNES , DJEBBAR ADEL SEDDIK , CHEDDIDI RAHIM].
