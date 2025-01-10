@@ -90,4 +90,4 @@ Gérer les notifications de rappel pour les rendez-vous.
 
 Auteur
 
-Ce projet a été développé par [HAMDAOUI YACINE , MESSEKHER YOUNES , DJEBBAR ADEL SEDDIK , CHEDDIDI RAHIM].
+Ce projet a été développé par [HAMDAOUI YACINE , MESSEKHER YOUNES , DJEBBAR ADEL SEDDIK , CHEDDIDI RAHIM , ALWAZIR MOHAMED ].
