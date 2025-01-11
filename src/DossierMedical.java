@@ -24,8 +24,8 @@ public class DossierMedical {
     }
 
     //gestion du DM
-    public void ajouterConsultation(String consultation) {
-        this.consultations.add(consultation);
+    public void ajouterConsultation(String date, String heure) {
+        getConsultations().add("Consultation Le:"+date +",a: "+heure);
     }
     public void ajouterAllergie(String allergie) {
         this.allergies.add(allergie);
@@ -36,22 +36,26 @@ public class DossierMedical {
 
 
     public void afficherConsultations() {
-        System.out.println("Consultations: ");
-        for (String consultation : this.consultations) {
-            System.out.println(consultation);
-        }
-    }
+        StringBuilder strb = new StringBuilder();
+        for (String consultation : getConsultations()) {
+            strb.append(consultation).append("\n");
+        }        
+        System.out.println("Consultations: \n"+strb.toString());
+    } 
     public void afficherAllergies() {
-        System.out.println("Allergies: ");
-        for (String allergie : this.allergies) {
-            System.out.println(allergie);
-        }
+        StringBuilder strb = new StringBuilder();
+        for (String allergie : getAllergies()) {
+            strb.append(consultation).append("\n| ");
+        }        
+        System.out.println("Allergies: \n"+strb.toString());
     }
+     
     public void afficherAntecedants() {
-        System.out.println("Antécédents: ");
-        for (String antecedant : this.antecedants) {
-            System.out.println(antecedant);
-        }
+        StringBuilder strb = new StringBuilder();
+        for (String antecedant : getAntecedants()) {
+            strb.append(consultation).append("\n| ");
+        }        
+        System.out.println("Antecedants: \n"+strb.toString());
     }
 
 
