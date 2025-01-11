@@ -26,12 +26,15 @@ public class DossierMedical {
     //gestion du DM
     public void ajouterConsultation(String date, String heure) {
         getConsultations().add("Consultation Le:"+date +",a: "+heure);
+        System.out.println("Consultation ajouté ______ Dossier Medical mis à jour");
     }
     public void ajouterAllergie(String allergie) {
-        this.allergies.add(allergie);
+        getAllergies().add(allergie);
+        System.out.println("Allergie ajouté ______ Dossier Medical mis à jour");
     }
     public void ajouterAntecedants(String antecedant) {
-        this.antecedants.add(antecedant);
+        getAntecedants().add(antecedant);
+        System.out.println("Antecedant ajouté ______ Dossier Medical mis à jour");
     }
 
 
