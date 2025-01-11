@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -89,7 +92,7 @@ public class GestionnairePt {
 
     public void gestionDM(Scanner in){
         System.out.print("Index du patient pour afficher DM: ");
-        int index = in.nextInt();
+        int indexDM = in.nextInt();
         try{
             if(indexDM>=0 && indexDM<getPatients().size()){
                 Patient patient = getPatients().get(indexDM);
@@ -138,7 +141,7 @@ public class GestionnairePt {
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             gestionDM(in);
             }
-        }catch{
+        }catch(InputMismatchException e){
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             gestionDM(in);
             }
