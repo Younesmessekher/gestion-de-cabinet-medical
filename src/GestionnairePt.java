@@ -106,9 +106,11 @@ public class GestionnairePt {
                 in.nextLine();
             switch (action) {
                 case 1:
-                    System.out.println("Entrez l'allergie à ajouter: ");
-                    String consultation = in.nextLine();
-                    patient.getDossierMedical().ajouterConsultation(consultation);
+                    LocalDate date = LocalDate.now();
+                    LocalTime heure = LocalTime.now();
+                    DateTimeFormatter frDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                    DateTimeFormatter frHeure = DateTimeFormatter.ofPattern("HH:mm");
+                    patient.getDossierMedical().ajouterConsultation(date.format(frDate),heure.format(frHeure));
                 break;
                 case 2:
                     System.out.println("Entrez l'allergie à ajouter: ");
