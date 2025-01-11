@@ -75,11 +75,10 @@ public class GestionCM {
                     } else if (action == 2) {
                         secretaire.planifierRdVNP(medecin, gestionPt, in);
                     } else if (action == 3) {
-                        secretaire.annulerRdV(in);
+                        secretaire.annulerRdV(medecin,in);
                     } else {
                         break;
                     }
-
                     try {
                         System.out.println("\n1.RETOUR\n");
                         retour = in.nextInt();
@@ -88,12 +87,10 @@ public class GestionCM {
                         in.next(); 
                         break;
                     }
-
                     if (retour == 1) {
                         break;
                     }
                     break;
-
                 case 2:
                     if (gestionPt.getPatients().isEmpty()) {
                         gestionPt.listePatients();
