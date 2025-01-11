@@ -38,10 +38,6 @@ public class Medecin extends Personne {
 
 
     //Medecin travail
-    public void consulter(Patient patient) {
-        patient.getDossierMedical().ajouterConsultation("Consultation avec le patient : " + patient.getNom() + "\nHeure et Date: " + getDateHeure().format(frDateHeure));
-        System.out.println("Consultation ajouté ______ Dossier Medicale mis à jour");
-    }
 
     public void declareCertificat(GestionnairePt gestionPt,Scanner in){
             System.out.print("Enter l'index du patient : ");
