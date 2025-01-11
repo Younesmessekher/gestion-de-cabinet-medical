@@ -42,6 +42,7 @@ public class Secretaire extends Personne{
                     dateHeure = LocalDateTime.of(LocalDate.parse(dateStr, frDate), LocalTime.parse(heureStr, frHeure));           
                     if (medecin.disponible(dateHeure)) {
                         this.listRdV.add(new RendezVous(patient, dateHeure));
+                        medecin.getListRdV().add(dateHeure);
                         System.out.println("____Rendez-vous Ajouté____");
                         validInput = true;
                     } else {
