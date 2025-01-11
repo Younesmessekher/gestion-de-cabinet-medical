@@ -42,7 +42,7 @@ public class Secretaire extends Personne{
                     dateHeure = LocalDateTime.of(LocalDate.parse(dateStr, frDate), LocalTime.parse(heureStr, frHeure));           
                     if (medecin.disponible(dateHeure)) {
                         this.listRdV.add(new RendezVous(patient, dateHeure));
-                        medecin.getListRdV().add(dateHeure);
+                        medecin.getPlaning().add(dateHeure);
                         System.out.println("____Rendez-vous Ajouté____");
                         validInput = true;
                     } else {
@@ -116,6 +116,7 @@ public class Secretaire extends Personne{
                         dateHeure = LocalDateTime.of(LocalDate.parse(dateStr, frDate), LocalTime.parse(heureStr, frHeure));
                         if (medecin.disponible(dateHeure)) {
                             this.listRdV.add(new RendezVous(patient, dateHeure));
+                            medecin.getPlaning().add(dateHeure);
                             System.out.println("____Rendez-vous Ajouté____");
                             validInput = true;
                         } else {
@@ -150,7 +151,7 @@ public class Secretaire extends Personne{
         if(this.listRdV.isEmpty())System.out.println("\n|Pas de rendez vous pour l'instant");
         else {
             for (int index = 0; index < getListRdV().size(); index++) {
-                System.out.println("|(" + index + ") " + "Avec : " +getListRdV().get(index).getPatient().getNom()+ " " +getListRdV().get(index).getPatient().getPrenom()+", ("+getListRdV().get(index).getDateHeure().get.format(fr)+")");
+                System.out.println("|(" + index + ") " + "Avec : " +getListRdV().get(index).getPatient().getNom()+ " " +getListRdV().get(index).getPatient().getPrenom()+", ("+getListRdV().get(index).getDateHeure().format(fr)+")");
             }
         }   
     }
