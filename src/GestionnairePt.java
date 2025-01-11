@@ -123,13 +123,13 @@ public class GestionnairePt {
                     patient.getDossierMedical().ajouterAntecedants(antecedant);
                 break;
                 case 4:
-                    patient.getDossierMedical().afficherConsultations();
+                    System.out.print(patient.getDossierMedical().consultationsStr());
                 break;
                 case 5:
-                    patient.getDossierMedical().afficherAllergies();
+                    System.out.print(patient.getDossierMedical().allergiesStr());
                 break;
                 case 6:
-                    patient.getDossierMedical().afficherAntecedants();
+                    System.out.print(patient.getDossierMedical().antecedantsStr());
                 break;
                 default:
                 break;
