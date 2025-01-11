@@ -45,7 +45,7 @@ public class DossierMedical {
     public void afficherAllergies() {
         StringBuilder strb = new StringBuilder();
         for (String allergie : getAllergies()) {
-            strb.append(consultation).append("\n| ");
+            strb.append(allergie).append("\n| ");
         }        
         System.out.println("Allergies: \n"+strb.toString());
     }
@@ -53,7 +53,7 @@ public class DossierMedical {
     public void afficherAntecedants() {
         StringBuilder strb = new StringBuilder();
         for (String antecedant : getAntecedants()) {
-            strb.append(consultation).append("\n| ");
+            strb.append(antecedant).append("\n| ");
         }        
         System.out.println("Antecedants: \n"+strb.toString());
     }
