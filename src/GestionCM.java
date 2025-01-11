@@ -100,22 +100,22 @@ public class GestionCM {
                     } else {
                         gestionPt.listePatients();
                         gestionPt.gestionDM(in);
-                        break;
-                    }
-
-                    try {
                         System.out.println("\n1.RETOUR\n");
                         retour = in.nextInt();
-                    } catch (InputMismatchException e) {
-                        System.out.println("Erreur : Veuillez entrer un nombre valide.");
-                        in.next(); 
-                        break;
+                        try {
+                            if (retour == 1) {
+                                break;
+                            }
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Erreur : Veuillez entrer un nombre valide.");
+                            in.next(); 
+                            break;
+                        }
+                    break;
                     }
 
-                    if (retour == 1) {
-                        break;
-                    }
-                    break;
+                   
 
                 case 3:
                     System.out.println("\nListe des patients :\n\n");
