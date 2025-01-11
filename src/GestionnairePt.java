@@ -91,33 +91,48 @@ public class GestionnairePt {
         System.out.print("Index du patient pour afficher DM: ");
         int index = in.nextInt();
         try{
-            if(index>=0 && index<getPatients().size()){
-                Patient patient = getPatients().get(index);
+            if(indexDM>=0 && indexDM<getPatients().size()){
+                Patient patient = getPatients().get(indexDM);
                 System.out.println(patient.getDossierMedical().dossierM());
-                System.out.println("1\\Ajouter allergie \n2\\Ajouter antecedant\n3\\Afficher les allergies du patient\n4\\Afficher les antecedants du patient\n5\\RETOUR\n");
+                System.out.println(
+                "1\\Ajouter Consultation"+
+                "\n2\\Ajouter allergie "+
+                "\n3\\Ajouter antecedant"+
+                "\n4\\Afficher les Consultations"+
+                "\n5\\Afficher les allergies du patient"+
+                "\n6\\Afficher les antecedants du patient"+
+                "\n7\\RETOUR\n");
                 int action=in.nextInt();
                 in.nextLine();
-                switch (action) {
+            switch (action) {
                 case 1:
+                    System.out.println("Entrez l'allergie à ajouter: ");
+                    String consultation = in.nextLine();
+                    patient.getDossierMedical().ajouterConsultation(consultation);
+                break;
+                case 2:
                     System.out.println("Entrez l'allergie à ajouter: ");
                     String allergie = in.nextLine();
                     patient.getDossierMedical().ajouterAllergie(allergie);
                 break;
-                case 2:
+                case 3:
                     System.out.println("Entrez l'antecedant à ajouter: ");
                     String antecedant = in.nextLine();
                     patient.getDossierMedical().ajouterAntecedants(antecedant);
                 break;
-                case 3:
+                case 4:
+                    patient.getDossierMedical().afficherConsultations();
+                break;
+                case 5:
                     patient.getDossierMedical().afficherAllergies();
                 break;
-                case 4:
+                case 6:
                     patient.getDossierMedical().afficherAntecedants();
                 break;
                 default:
                 break;
             }
-            } else {
+        } else {
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             gestionDM(in);
             }
