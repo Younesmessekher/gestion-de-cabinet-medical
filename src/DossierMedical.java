@@ -35,27 +35,35 @@ public class DossierMedical {
     }
 
 
-    public void afficherConsultations() {
+   public String consultationsStr() {
         StringBuilder strb = new StringBuilder();
         for (String consultation : getConsultations()) {
             strb.append(consultation).append("\n");
         }        
-        System.out.println("Consultations: \n"+strb.toString());
+        return strb.toString();
     } 
-    public void afficherAllergies() {
+    public String allergiesStr() {
         StringBuilder strb = new StringBuilder();
         for (String allergie : getAllergies()) {
             strb.append(allergie).append("\n| ");
         }        
-        System.out.println("Allergies: \n"+strb.toString());
+        return strb.toString();
     }
-     
-    public void afficherAntecedants() {
+
+    public String antecedantsStr() {
         StringBuilder strb = new StringBuilder();
         for (String antecedant : getAntecedants()) {
             strb.append(antecedant).append("\n| ");
         }        
-        System.out.println("Antecedants: \n"+strb.toString());
+        return strb.toString();
+    }
+    public String dossierM() {
+        return 
+            "\nConsultations : " + consultationsStr() +
+            "\nAllergies : " + allergiesStr() + 
+            "\nAntecedants : " + antecedantsStr() +
+            "\nPoids : " + getPoids() +
+            "\nTaille : " + getTaille() ;
     }
 
 
@@ -92,12 +100,4 @@ public class DossierMedical {
         this.consultations = consultations;
     }
 
-    public String dossierM() {
-        return 
-            "Consultations : " + getConsultations() +
-            "\nAllergies : " + getAllergies() + 
-            "\nTraitements : " + getAntecedants() +
-            "\nPoids : " + getPoids() +
-            "\nTaille : " + getTaille() ;
-    }
 }
