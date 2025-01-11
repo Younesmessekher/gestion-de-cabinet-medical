@@ -95,7 +95,7 @@ public class GestionnairePt {
                 Patient patient = getPatients().get(indexDM);
                 System.out.println(patient.getDossierMedical().dossierM());
                 System.out.println(
-                "1\\Ajouter Consultation"+
+                "\n\n1\\Ajouter Consultation"+
                 "\n2\\Ajouter allergie "+
                 "\n3\\Ajouter antecedant"+
                 "\n4\\Afficher les Consultations"+
