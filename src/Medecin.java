@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Medecin extends Personne {    
     private String specialite;
     private LocalDateTime dateHeure = LocalDateTime.now();
-    private ArrayList<LocalDateTime> planing = new ArrayList<>();
+    private ArrayList<LocalDateTime> planing;
     private final DateTimeFormatter frDateHeure = DateTimeFormatter.ofPattern("HH:mm dd-MM-yyyy");
     private final DateTimeFormatter frDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private final DateTimeFormatter frHeure = DateTimeFormatter.ofPattern("HH:mm");
@@ -17,6 +17,7 @@ public class Medecin extends Personne {
     public Medecin() {
         super("","" , "", "");
         this.specialite = "";
+        this.planing = new ArrayList<>();
     }
 
     public boolean disponible(LocalDateTime dateHeure) {
