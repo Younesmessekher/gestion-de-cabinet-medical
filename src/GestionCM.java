@@ -112,11 +112,7 @@ public class GestionCM {
                             in.next(); 
                             break;
                         }
-                    break;
                     }
-
-                   
-
                 case 3:
                     System.out.println("\nListe des patients :\n\n");
                     gestionPt.listePatients();
