@@ -100,6 +100,7 @@ public class GestionCM {
                     } else {
                         gestionPt.listePatients();
                         gestionPt.gestionDM(in);
+                        break;
                     }
 
                     try {
