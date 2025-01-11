@@ -90,13 +90,14 @@ public class GestionnairePt {
     public void gestionDM(Scanner in){
         System.out.print("Index du patient pour afficher DM: ");
         int index = in.nextInt();
-        if(index>0 && index<getPatients().size()){
-            Patient patient = getPatients().get(index);
-            System.out.println(patient.getDossierMedical().dossierM());
-            System.out.println("1\\Ajouter allergie \n2\\Ajouter antecedant\n3\\Afficher les allergies du patient\n4\\Afficher les antecedants du patient\n5\\RETOUR\n");
-            int action=in.nextInt();
-            in.nextLine();
-            switch (action) {
+        try{
+            if(index>=0 && index<getPatients().size()){
+                Patient patient = getPatients().get(index);
+                System.out.println(patient.getDossierMedical().dossierM());
+                System.out.println("1\\Ajouter allergie \n2\\Ajouter antecedant\n3\\Afficher les allergies du patient\n4\\Afficher les antecedants du patient\n5\\RETOUR\n");
+                int action=in.nextInt();
+                in.nextLine();
+                switch (action) {
                 case 1:
                     System.out.println("Entrez l'allergie à ajouter: ");
                     String allergie = in.nextLine();
@@ -116,10 +117,15 @@ public class GestionnairePt {
                 default:
                 break;
             }
-        } else {
+            } else {
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             gestionDM(in);
-        }
+            }
+        }catch{
+            System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
+            gestionDM(in);
+            }
+        
     }
 
 
