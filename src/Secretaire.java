@@ -68,8 +68,6 @@ public class Secretaire extends Personne{
             String telephone = in.nextLine();
             System.out.print("Adresse: ");
             String adresse = in.nextLine();
-
-
             int poids = 0;
             boolean poidsValide = false;
             while (!poidsValide) {
@@ -86,9 +84,7 @@ public class Secretaire extends Personne{
                 } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage());
                 }
-            }
-
-          
+            }          
             int taille = 0;
             boolean tailleValide = false;
             while (!tailleValide) {
@@ -106,7 +102,6 @@ public class Secretaire extends Personne{
                     System.out.println(e.getMessage());
                 }
             }
-
             Patient patient = new Patient(nom, prenom, telephone, adresse, poids, taille);
             if (!gestionPt.getPatients().contains(patient)) {
                 gestionPt.getPatients().add(patient);
@@ -153,8 +148,8 @@ public class Secretaire extends Personne{
     public void ficheRdV(){
         if(this.listRdV.isEmpty())System.out.println("\n|Pas de rendez vous pour l'instant");
         else {
-            for (int index = 0; index < this.listRdV.size(); index++) {
-                System.out.println("|(" + index + ") " + "Avec : " +this.listRdV.get(index).getPatient().getNom()+ " " +this.listRdV.get(index).getPatient().getPrenom()+", ("+this.dateHeure.format(fr)+")");
+            for (int index = 0; index < getListRdV().size(); index++) {
+                System.out.println("|(" + index + ") " + "Avec : " +getListRdV().get(index).getPatient().getNom()+ " " +getListRdV().get(index).getPatient().getPrenom()+", ("+getListRdV().get(index).getDateHeure().get.format(fr)+")");
             }
         }   
     }
