@@ -1,12 +1,14 @@
 import static java.time.DayOfWeek.FRIDAY;
 import static java.time.DayOfWeek.SATURDAY;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Medecin extends Personne {    
     private String specialite;
     private LocalDateTime dateHeure = LocalDateTime.now();
+    private ArrayList<LocalDateTime> planing = new ArrayList<>();
     private final DateTimeFormatter frDateHeure = DateTimeFormatter.ofPattern("HH:mm dd-MM-yyyy");
     private final DateTimeFormatter frDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private final DateTimeFormatter frHeure = DateTimeFormatter.ofPattern("HH:mm");
@@ -18,7 +20,7 @@ public class Medecin extends Personne {
     }
 
     public boolean disponible(LocalDateTime dateHeure) {
-        return !((dateHeure.getHour()>18 && dateHeure.getHour()<8) && (dateHeure.getDayOfWeek()==FRIDAY && dateHeure.getDayOfWeek()==SATURDAY));
+        return !((dateHeure.getHour()>18 && dateHeure.getHour()<8) && (dateHeure.getDayOfWeek()==FRIDAY && dateHeure.getDayOfWeek()==SATURDAY) && getPlaning().contains(dateHeure));
     }
 
     public void initMedecin(Scanner in){
