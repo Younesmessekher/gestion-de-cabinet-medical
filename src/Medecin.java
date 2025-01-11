@@ -20,7 +20,7 @@ public class Medecin extends Personne {
     }
 
     public boolean disponible(LocalDateTime dateHeure) {
-        return !((dateHeure.getHour()>18 && dateHeure.getHour()<8) && (dateHeure.getDayOfWeek()==FRIDAY && dateHeure.getDayOfWeek()==SATURDAY) && getPlaning().contains(dateHeure));
+        return ((dateHeure.getHour()<18 && dateHeure.getHour()>8) && (!dateHeure.getDayOfWeek().equals(FRIDAY) && !dateHeure.getDayOfWeek().equals(SATURDAY)) && !getPlaning().contains(dateHeure));
     }
 
     public void initMedecin(Scanner in){
