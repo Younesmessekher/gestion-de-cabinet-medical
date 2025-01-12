@@ -60,11 +60,11 @@ public class Medecin extends Personne {
     public void ecritOrdonnance(Scanner in) {
         Ordonnance ordn = new Ordonnance();
         ordn.ecritMedicament(in);
-        System.out.println("\n_______ORDONNANCE________\n" + 
+        System.out.println("\n_______ORDONNANCE__________\n" + 
         getDateHeure().format(frHeure) +"     --     "+ getDateHeure().format(frDate) + 
         "\nDr." + getNom() + "\n\n" + 
         ordn.medicamentsString() + 
-        "\n__________________________");
+        "\n___________________________");
     }
 
 
