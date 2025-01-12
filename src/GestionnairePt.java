@@ -116,22 +116,25 @@ public class GestionnairePt {
                     patient.getDossierMedical().ajouterConsultation(date.format(frDate),heure.format(frHeure));
                 break;
                 case 2:
-                    System.out.println("Entrez l'allergie à ajouter: ");
+                    System.out.println("\nEntrez l'allergie à ajouter: ");
                     String allergie = in.nextLine();
                     patient.getDossierMedical().ajouterAllergie(allergie);
                 break;
                 case 3:
-                    System.out.println("Entrez l'antecedant à ajouter: ");
+                    System.out.println("\nEntrez l'antecedant à ajouter: ");
                     String antecedant = in.nextLine();
                     patient.getDossierMedical().ajouterAntecedants(antecedant);
                 break;
                 case 4:
-                    System.out.print(patient.getDossierMedical().consultationsStr());
+                    System.out.print("\n______________\nCONSULTATIONS\n"+
+                                     patient.getDossierMedical().consultationsStr());
                 break;
                 case 5:
-                    System.out.print(patient.getDossierMedical().allergiesStr());
+                    System.out.print("\n____________\nALLERGIES\n"+
+                                     patient.getDossierMedical().allergiesStr());
                 break;
                 case 6:
+                    "\n______________\nANTECEDANTS\n"+
                     System.out.print(patient.getDossierMedical().antecedantsStr());
                 break;
                 default:
