@@ -50,7 +50,7 @@ public class Medecin extends Personne {
                 "\n\n  Je soussigné (e), Docteur "+getNom()+
                 "\ncertifie avoir examiné Mme/ M "+patient.getNom()+" "+patient.getPrenom()+"."+
                 "\n\nFait à "+getAdresse()+",le "+getDateHeure().format(frDate) + " ,à " + getDateHeure().format(frHeure) +"."+ 
-                "\n________________________________________________");
+                "\n_________________________________________________");
             }else{
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             declareCertificat(gestionPt, in);
