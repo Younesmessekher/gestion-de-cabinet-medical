@@ -81,6 +81,7 @@ public class GestionnairePt {
         }
     }
     public void listePatients(){
+        System.out.println("LISTE DES PATIENTS");
         if(getPatients().isEmpty()) System.out.println("\n|liste des patients vide pour l'instant");
         else {
             for (int index = 0; index < getPatients().size(); index++) {
