@@ -29,11 +29,11 @@ public class DossierMedical {
         System.out.println("Consultation ajouté ______ Dossier Medical mis à jour");
     }
     public void ajouterAllergie(String allergie) {
-        getAllergies().add(allergie);
+        getAllergies().add("Allergique au "+allergie);
         System.out.println("Allergie ajouté ______ Dossier Medical mis à jour");
     }
     public void ajouterAntecedants(String antecedant) {
-        getAntecedants().add(antecedant);
+        getAntecedants().add("A deja un(une) "antecedant);
         System.out.println("Antecedant ajouté ______ Dossier Medical mis à jour");
     }
 
@@ -41,7 +41,7 @@ public class DossierMedical {
    public String consultationsStr() {
         StringBuilder strb = new StringBuilder();
         for (String consultation : getConsultations()) {
-            strb.append(consultation).append("\n");
+            strb.append(consultation).append("\n|");
         }        
         return strb.toString();
     } 
@@ -62,11 +62,11 @@ public class DossierMedical {
     }
     public String dossierM() {
         return 
-            "\nConsultations : " + consultationsStr() +
-            "\nAllergies : " + allergiesStr() + 
-            "\nAntecedants : " + antecedantsStr() +
-            "\nPoids : " + getPoids() +
-            "\nTaille : " + getTaille() ;
+            "\nConsultations \n: " + consultationsStr() +
+            "\nAllergies \n: " + allergiesStr() + 
+            "\nAntecedants \n: " + antecedantsStr() +
+            "\nPoids : \n" + getPoids() +
+            "\nTaille : \n" + getTaille() ;
     }
 
 
