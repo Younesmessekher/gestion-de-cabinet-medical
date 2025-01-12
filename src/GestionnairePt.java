@@ -128,15 +128,15 @@ public class GestionnairePt {
                 break;
                 case 4:
                     System.out.print("\n______________\nCONSULTATIONS\n"+
-                                     patient.getDossierMedical().consultationsStr());
+                    patient.getDossierMedical().consultationsStr());
                 break;
                 case 5:
                     System.out.print("\n____________\nALLERGIES\n"+
-                                     patient.getDossierMedical().allergiesStr());
+                    patient.getDossierMedical().allergiesStr());
                 break;
                 case 6:
-                    "\n______________\nANTECEDANTS\n"+
-                    System.out.print(patient.getDossierMedical().antecedantsStr());
+                    System.out.print("\n______________\nANTECEDANTS\n"+
+                    patient.getDossierMedical().antecedantsStr());
                 break;
                 default:
                 break;
