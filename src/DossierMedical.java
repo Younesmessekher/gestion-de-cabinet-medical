@@ -33,7 +33,7 @@ public class DossierMedical {
         System.out.println("Allergie ajouté ______ Dossier Medical mis à jour");
     }
     public void ajouterAntecedants(String antecedant) {
-        getAntecedants().add("A deja un(une) "antecedant);
+        getAntecedants().add("A deja un(une) "+antecedant);
         System.out.println("Antecedant ajouté ______ Dossier Medical mis à jour");
     }
 
