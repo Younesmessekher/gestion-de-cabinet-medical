@@ -62,11 +62,11 @@ public class DossierMedical {
     }
     public String dossierM() {
         return 
-            "\nConsultations \n: " + consultationsStr() +
-            "\nAllergies \n: " + allergiesStr() + 
-            "\nAntecedants \n: " + antecedantsStr() +
-            "\nPoids : \n" + getPoids() +
-            "\nTaille : \n" + getTaille() ;
+            "\nConsultations:\n" + consultationsStr() +
+            "\nAllergies:\n" + allergiesStr() + 
+            "\nAntecedants :\n" + antecedantsStr() +
+            "\nPoids :\n" + getPoids() +
+            "\nTaille :\n" + getTaille() ;
     }
 
 
