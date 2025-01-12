@@ -151,6 +151,7 @@ public class Secretaire extends Personne{
     }
 
     public void ficheRdV(){
+        System.out.println("FICHE DES RENDEZ-VOUS");
         if(getListRdV().isEmpty())System.out.println("\n|Pas de rendez vous pour l'instant");
         else {
             for (int index = 0; index < getListRdV().size(); index++) {
