@@ -44,14 +44,13 @@ public class Medecin extends Personne {
             if (index >= 0 && index<gestionPt.getPatients().size()) {
                 Patient patient = gestionPt.getPatients().get(index);
                 System.out.println("\n\n_______________CERTIFICAT MEDICAL________________"+
-                "Dr." + getNom() + 
+                "\nDr." + getNom() + 
                 "\nSpecialite: "+getSpecialite()+
                 "\nAdresse: "+getAdresse()+
-                "\nTelephone(au cabinet médical): "+getTelephone()+
                 "\n\n  Je soussigné (e), Docteur "+getNom()+
                 "\ncertifie avoir examiné Mme/ M "+patient.getNom()+
                 " "+patient.getPrenom()+"\nFait à "+getAdresse()+",le "+getDateHeure().format(frDate) +
-                " ,à " + getDateHeure().format(frHeure) + "\n____________________________________________");
+                " ,à " + getDateHeure().format(frHeure) + "\n________________________________________________");
             }else{
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             declareCertificat(gestionPt, in);
