@@ -48,9 +48,9 @@ public class Medecin extends Personne {
                 "\nSpecialite: "+getSpecialite()+
                 "\nAdresse: "+getAdresse()+
                 "\n\n  Je soussigné (e), Docteur "+getNom()+
-                "\ncertifie avoir examiné Mme/ M "+patient.getNom()+
-                " "+patient.getPrenom()+"\nFait à "+getAdresse()+",le "+getDateHeure().format(frDate) +
-                " ,à " + getDateHeure().format(frHeure) + "\n________________________________________________");
+                "\ncertifie avoir examiné Mme/ M "+patient.getNom()+" "+patient.getPrenom()+"."+
+                "\n\nFait à "+getAdresse()+",le "+getDateHeure().format(frDate) + " ,à " + getDateHeure().format(frHeure) +"."+ 
+                "\n________________________________________________");
             }else{
             System.out.println("____VEUILLEZ ENTRER UN INDEX CORRECT!____\n");
             declareCertificat(gestionPt, in);
