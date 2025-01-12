@@ -91,7 +91,7 @@ public class GestionnairePt {
 
 
     public void gestionDM(Scanner in){
-        System.out.print("Index du patient pour afficher DM: ");
+        System.out.print("\n\nIndex du patient pour afficher DM: ");
         int indexDM = in.nextInt();
         try{
             if(indexDM>=0 && indexDM<getPatients().size()){
