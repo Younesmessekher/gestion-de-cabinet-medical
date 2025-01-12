@@ -35,7 +35,7 @@ public class Ordonnance {
             default :
                 break;
             }
-        medicaments.add(medicament + " ,Dosage" + dosage + " ,Pour: " + duree);
+        medicaments.add(medicament + " ,Dosage: " + dosage + " ,Pour: " + duree);
     }
 
 
