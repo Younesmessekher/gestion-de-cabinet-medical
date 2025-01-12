@@ -48,6 +48,7 @@ public class GestionCM {
 
             switch (choix) {
                 case 1:
+                    System.out.println("\n__________________________\nGESTION DES RENDEZ VOUS\n__________________________\n");
                     secretaire.ficheRdV();
                     System.out.println(
                         "\n\n1.Ajouter un Rendez-Vous Pour un Patient Existant\n" +
@@ -92,6 +93,7 @@ public class GestionCM {
                     }
                     break;
                 case 2:
+                    System.out.println("\n_____________________________________\nGESTION DES DOSSIERS MEDICAUX\n_____________________________________\n");
                     if (gestionPt.getPatients().isEmpty()) {
                         gestionPt.listePatients();
                     } else {
@@ -111,7 +113,7 @@ public class GestionCM {
                         }
                     }
                 case 3:
-                    System.out.println("\nListe des patients :\n\n");
+                    System.out.println("\n________________________\nGESTION DES PATIENTS\n________________________\n");
                     gestionPt.listePatients();
                     System.out.println("\n1.Ajouter Patient\n2.Supprimer Patient\n3.RETOUR\n");
 
@@ -148,7 +150,7 @@ public class GestionCM {
                     break;
 
                 case 4:
-                    System.out.println("\nORDONNANCE :\n");
+                    System.out.println("\n_________________\nORDONNANCE\n_________________\n");
                     medecin.ecritOrdonnance(in);
 
                     try {
@@ -166,7 +168,7 @@ public class GestionCM {
                     break;
 
                 case 5:
-                    System.out.println("\nCERTIFICAT MEDICAL :\n");
+                    System.out.println("\n__________________________\nCERTIFICAT MEDICAL\n__________________________\n");
                     if (gestionPt.getPatients().isEmpty()) {
                         gestionPt.listePatients();
                     } else {
